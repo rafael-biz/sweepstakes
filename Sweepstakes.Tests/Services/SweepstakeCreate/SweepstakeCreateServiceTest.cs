@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sweepstakes.Entities;
-using Sweepstakes.Mocks.Repositories;
+using Sweepstakes.Repositories;
 using Sweepstakes.Services.SweepstakeCreate;
 using System;
 
