@@ -20,6 +20,9 @@ testable, with all the benefits that implies.
 
 # Use Cases
 
-The use cases for this application are:
+An Administrator creates a Sweepstake. Entrants apply to sweepstakes. On
+the sweepstake date, the System draws a winner and notifies the result by
+e-mail to all entrants. Administrators and Entrants may search for running
+sweepstakes and also closed sweepstakes.
 
 ![Use Cases](use_cases.png)
