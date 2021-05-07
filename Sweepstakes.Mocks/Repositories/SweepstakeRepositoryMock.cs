@@ -21,5 +21,18 @@ namespace Sweepstakes.Repositories
                 yield return sweepstake.Clone();
             }
         }
+
+        public Sweepstake Get(string sweepstakeId)
+        {
+            if (!data.ContainsKey(sweepstakeId))
+                return null;
+
+            return data[sweepstakeId].Clone();
+        }
+
+        public void Update(Sweepstake sweepstake)
+        {
+            data[sweepstake.Id] = sweepstake.Clone();
+        }
     }
 }

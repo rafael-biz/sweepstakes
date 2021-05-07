@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Sweepstakes.Entities
+namespace Sweepstakes.Services.SweepstakeDetails
 {
-    public sealed class Sweepstake
+    public sealed class SweepstakeDetailsDTO
     {
         /// <summary>
         /// An unique identifier.
@@ -29,6 +28,6 @@ namespace Sweepstakes.Entities
         /// <summary>
         /// List of entrants.
         /// </summary>
-        public List<Entrant> Entrants { get; set; }
+        public List<EntrantDetailsDTO> Entrants { get; set; }
     }
 }

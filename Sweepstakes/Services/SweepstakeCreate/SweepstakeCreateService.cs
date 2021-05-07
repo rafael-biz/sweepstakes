@@ -1,6 +1,7 @@
 ﻿using Sweepstakes.Entities;
 using Sweepstakes.Repositories;
 using System;
+using System.Collections.Generic;
 
 namespace Sweepstakes.Services.SweepstakeCreate
 {
@@ -24,6 +25,7 @@ namespace Sweepstakes.Services.SweepstakeCreate
                 Name = dto.Name,
                 Description = dto.Description,
                 DrawDate = dto.DrawDate,
+                Entrants = new List<Entrant>()
             };
 
             repository.Insert(sweepstake);

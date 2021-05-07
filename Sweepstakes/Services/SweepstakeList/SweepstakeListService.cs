@@ -16,6 +16,9 @@ namespace Sweepstakes.Services.SweepstakeList
             this.repository = repository;
         }
 
+        /// <summary>
+        /// Returns all sweepstakes.
+        /// </summary>
         public IEnumerable<SweepstakeListDTO> GetAll()
         {
             IEnumerable<Sweepstake> sweepstakes = repository.GetAll();

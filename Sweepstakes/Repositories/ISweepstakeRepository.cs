@@ -18,5 +18,19 @@ namespace Sweepstakes.Repositories
         /// </summary>
         /// <returns></returns>
         IEnumerable<Sweepstake> GetAll();
+
+        /// <summary>
+        /// Returns a sweepstake. Otherwise, retuns null.
+        /// </summary>
+        /// <param name="sweepstakeId">
+        /// Sweepstake id.
+        /// </param>
+        Sweepstake Get(string sweepstakeId);
+
+        /// <summary>
+        /// Updates a sweepstake.
+        /// </summary>
+        /// <param name="sweepstake"></param>
+        void Update(Sweepstake sweepstake);
     }
 }
