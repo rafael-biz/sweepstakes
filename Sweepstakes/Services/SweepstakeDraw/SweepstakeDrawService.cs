@@ -1,4 +1,5 @@
-﻿using Sweepstakes.Entities;
+﻿using Sweepstakes.Controllers;
+using Sweepstakes.Entities;
 using Sweepstakes.Repositories;
 using System;
 
@@ -10,9 +11,12 @@ namespace Sweepstakes.Services.SweepstakeDraw
 
         private readonly ISweepstakeRepository repository;
 
-        public SweepstakeDrawService(ISweepstakeRepository repository)
+        private readonly ISweepstakeNotificationController notificationController;
+
+        public SweepstakeDrawService(ISweepstakeRepository repository, ISweepstakeNotificationController notificationController)
         {
             this.repository = repository;
+            this.notificationController = notificationController;
         }
 
         /// <summary>
@@ -29,6 +33,8 @@ namespace Sweepstakes.Services.SweepstakeDraw
             sweepstake.Winner = winner;
 
             repository.Update(sweepstake);
+
+            notificationController.Notify(sweepstake);
 
             return winner;
         }

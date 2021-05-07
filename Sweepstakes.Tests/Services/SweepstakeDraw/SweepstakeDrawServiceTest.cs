@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Sweepstakes.Controllers;
 using Sweepstakes.Entities;
 using Sweepstakes.Repositories;
 using Sweepstakes.Services.SweepstakeCreate;
@@ -6,8 +7,6 @@ using Sweepstakes.Services.SweepstakeDetails;
 using Sweepstakes.Services.SweepstakeDraw;
 using Sweepstakes.Services.SweepstakeEnter;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sweepstakes.Tests.Services.SweepstakeDraw
 {
@@ -15,13 +14,15 @@ namespace Sweepstakes.Tests.Services.SweepstakeDraw
     public class SweepstakeDrawServiceTest
     {
         [TestMethod]
-        public void TestCreate()
+        [Description("It must draw a winner.")]
+        public void TestDraw()
         {
             var repo = new SweepstakeRepositoryMock();
             var createService = new SweepstakeCreateService(repo);
             var enterService = new SweepstakeEnterService(repo);
             var detailsService = new SweepstakeDetailsService(repo);
-            var drawService = new SweepstakeDrawService(repo);
+            var notificationController = new SweepstakeNotificationControllerMock();
+            var drawService = new SweepstakeDrawService(repo, notificationController);
 
             Sweepstake sweepstake = createService.Create(new SweepstakeCreateDTO()
             {
