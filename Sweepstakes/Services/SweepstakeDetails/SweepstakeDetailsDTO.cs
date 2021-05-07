@@ -29,5 +29,10 @@ namespace Sweepstakes.Services.SweepstakeDetails
         /// List of entrants.
         /// </summary>
         public List<EntrantDetailsDTO> Entrants { get; set; }
+
+        /// <summary>
+        /// Draw winner.
+        /// </summary>
+        public EntrantDetailsDTO Winner { get; set; }
     }
 }

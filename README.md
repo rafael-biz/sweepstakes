@@ -25,4 +25,6 @@ the sweepstake date, the System draws a winner and notifies the result by
 e-mail to all entrants. Administrators and Entrants may search for running
 sweepstakes and also closed sweepstakes.
 
-![Use Cases](use_cases.png)
+<p align="center">
+  <img src="use_cases.png">
+</p>

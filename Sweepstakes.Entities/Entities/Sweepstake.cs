@@ -30,5 +30,10 @@ namespace Sweepstakes.Entities
         /// List of entrants.
         /// </summary>
         public List<Entrant> Entrants { get; set; }
+
+        /// <summary>
+        /// Draw winner.
+        /// </summary>
+        public Entrant Winner { get; set; }
     }
 }

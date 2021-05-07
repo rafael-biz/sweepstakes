@@ -34,7 +34,13 @@ namespace Sweepstakes.Services.SweepstakeDetails
                     Name = e.Name,
                     Email = e.Email,
                     Phone = e.Phone
-                }).ToList()
+                }).ToList(),
+                Winner = sweepstake.Winner == null ? null : new EntrantDetailsDTO()
+                {
+                    Name = sweepstake.Winner.Name,
+                    Email = sweepstake.Winner.Email,
+                    Phone = sweepstake.Winner.Phone
+                }
             };
         }
     }
