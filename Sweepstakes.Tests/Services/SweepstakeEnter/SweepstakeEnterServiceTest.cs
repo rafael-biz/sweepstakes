@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sweepstakes.Entities;
-using Sweepstakes.Repositories;
 using Sweepstakes.Services.SweepstakeCreate;
 using Sweepstakes.Services.SweepstakeDetails;
 using Sweepstakes.Services.SweepstakeEnter;
@@ -12,12 +12,14 @@ namespace Sweepstakes.Tests.Services.SweepstakeEnter
     public class SweepstakeEnterServiceTest
     {
         [TestMethod]
-        public void TestCreate()
+        [Description("It must add entrants to a sweepstake.")]
+        public void TestAddEntrant()
         {
-            var repo = new SweepstakeRepositoryMock();
-            var createService = new SweepstakeCreateService(repo);
-            var enterService = new SweepstakeEnterService(repo);
-            var detailsService = new SweepstakeDetailsService(repo);
+            var provider = SweepstakeServiceProviderFactory.Build();
+
+            var createService = provider.GetRequiredService<SweepstakeCreateService>();
+            var enterService = provider.GetRequiredService<SweepstakeEnterService>();
+            var detailsService = provider.GetRequiredService<SweepstakeDetailsService>();
 
             Sweepstake sweepstake = createService.Create(new SweepstakeCreateDTO()
             {

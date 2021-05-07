@@ -1,11 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Sweepstakes.Entities;
-using Sweepstakes.Repositories;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sweepstakes.Services.SweepstakeCreate;
 using Sweepstakes.Services.SweepstakeList;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sweepstakes.Tests.Services.SweepstakeList
 {
@@ -13,12 +11,13 @@ namespace Sweepstakes.Tests.Services.SweepstakeList
     public sealed class SweepstakeListServiceTest
     {
         [TestMethod]
-        [Description("Must return a list of sweepstake ordered by descending draw date.")]
+        [Description("It must return a list of sweepstake ordered by descending draw date.")]
         public void TestGetAll()
         {
-            var repo = new SweepstakeRepositoryMock();
-            var createService = new SweepstakeCreateService(repo);
-            var listService = new SweepstakeListService(repo);
+            var provider = SweepstakeServiceProviderFactory.Build();
+
+            var createService = provider.GetRequiredService<SweepstakeCreateService>();
+            var listService = provider.GetRequiredService<SweepstakeListService>();
 
             createService.Create(new SweepstakeCreateDTO()
             {

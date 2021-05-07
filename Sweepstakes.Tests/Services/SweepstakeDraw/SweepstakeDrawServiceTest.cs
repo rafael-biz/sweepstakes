@@ -1,7 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Sweepstakes.Controllers;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sweepstakes.Entities;
-using Sweepstakes.Repositories;
 using Sweepstakes.Services.SweepstakeCreate;
 using Sweepstakes.Services.SweepstakeDetails;
 using Sweepstakes.Services.SweepstakeDraw;
@@ -17,12 +16,12 @@ namespace Sweepstakes.Tests.Services.SweepstakeDraw
         [Description("It must draw a winner.")]
         public void TestDraw()
         {
-            var repo = new SweepstakeRepositoryMock();
-            var createService = new SweepstakeCreateService(repo);
-            var enterService = new SweepstakeEnterService(repo);
-            var detailsService = new SweepstakeDetailsService(repo);
-            var notificationController = new SweepstakeNotificationControllerMock();
-            var drawService = new SweepstakeDrawService(repo, notificationController);
+            var provider = SweepstakeServiceProviderFactory.Build();
+
+            var createService = provider.GetRequiredService<SweepstakeCreateService>();
+            var enterService = provider.GetRequiredService<SweepstakeEnterService>();
+            var detailsService = provider.GetRequiredService<SweepstakeDetailsService>();
+            var drawService = provider.GetRequiredService<SweepstakeDrawService>();
 
             Sweepstake sweepstake = createService.Create(new SweepstakeCreateDTO()
             {
