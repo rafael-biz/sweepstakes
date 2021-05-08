@@ -23,8 +23,8 @@ namespace Sweepstakes.Tests.Services.SweepstakeEnter
 
             Sweepstake sweepstake = createService.Create(new SweepstakeCreateDTO()
             {
-                Name = "Winter's sweepstake",
-                Description = "The annual winter draw.",
+                Name = "Dovis",
+                Description = "Mother's day giveaway.",
                 DrawDate = new DateTime(2021, 6, 1, 14, 0, 0)
             });
 
@@ -45,8 +45,8 @@ namespace Sweepstakes.Tests.Services.SweepstakeEnter
             var details = detailsService.Get(sweepstake.Id);
 
             Assert.IsNotNull(details.Id);
-            Assert.AreEqual("Winter's sweepstake", details.Name);
-            Assert.AreEqual("The annual winter draw.", details.Description);
+            Assert.AreEqual("Dovis", details.Name);
+            Assert.AreEqual("Mother's day giveaway.", details.Description);
             Assert.AreEqual(new DateTime(2021, 6, 1, 14, 0, 0), details.DrawDate);
 
             Assert.AreEqual(2, details.Entrants.Count);

@@ -19,14 +19,14 @@ namespace Sweepstakes.Tests.Services.SweepstakeCreate
 
             Sweepstake sweepstake = service.Create(new SweepstakeCreateDTO()
             {
-                Name = "Winter's sweepstake",
-                Description = "The annual winter draw.",
+                Name = "Dovis",
+                Description = "Mother's day giveaway.",
                 DrawDate = new DateTime(2021, 6, 1, 14, 0, 0)
             });
 
             Assert.IsNotNull(sweepstake.Id);
-            Assert.AreEqual("Winter's sweepstake", sweepstake.Name);
-            Assert.AreEqual("The annual winter draw.", sweepstake.Description);
+            Assert.AreEqual("Dovis", sweepstake.Name);
+            Assert.AreEqual("Mother's day giveaway.", sweepstake.Description);
             Assert.AreEqual(new DateTime(2021, 6, 1, 14, 0, 0), sweepstake.DrawDate);
         }
     }

@@ -25,8 +25,8 @@ namespace Sweepstakes.Tests.Services.SweepstakeDraw
 
             Sweepstake sweepstake = createService.Create(new SweepstakeCreateDTO()
             {
-                Name = "Winter's sweepstake",
-                Description = "The annual winter draw.",
+                Name = "Dovis",
+                Description = "Mother's day giveaway.",
                 DrawDate = new DateTime(2021, 6, 1, 14, 0, 0)
             });
 
