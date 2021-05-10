@@ -1,8 +1,5 @@
 ﻿using Sweepstakes.Entities;
 using Sweepstakes.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sweepstakes.Services.SweepstakeEnter
 {
@@ -15,6 +12,9 @@ namespace Sweepstakes.Services.SweepstakeEnter
             this.repository = repository;
         }
 
+        /// <summary>
+        /// Enter on a sweepstake.
+        /// </summary>
         public void AddEntrant(string sweepstakeId, EntrantDTO dto)
         {
             Sweepstake entrance = repository.Get(sweepstakeId);
