@@ -14,17 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes", "Sweepstakes\Sweepstakes.csproj", "{1A17C8D5-4E39-4A8F-97C2-5673F97420E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Entities", "Sweepstakes.Entities\Sweepstakes.Entities.csproj", "{90CA21C3-B482-48C0-8040-D1056D79E246}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Mocks", "Sweepstakes.Mocks\Sweepstakes.Mocks.csproj", "{9D6E9AD5-99B8-4893-8F6A-6323A0375977}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Tests", "Sweepstakes.Tests\Sweepstakes.Tests.csproj", "{CC0DE008-747C-41F0-A4CF-B734F34F107D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweepstakes.Controllers.Notifications", "Sweepstakes.Controllers.Notifications\Sweepstakes.Controllers.Notifications.csproj", "{2938BBE5-B0D5-4331-A5F1-7B69646FD46C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Controllers.Notifications", "Sweepstakes.Controllers.Notifications\Sweepstakes.Controllers.Notifications.csproj", "{2938BBE5-B0D5-4331-A5F1-7B69646FD46C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweepstakes.Controllers", "Sweepstakes.Controllers\Sweepstakes.Controllers.csproj", "{8BA69278-C359-4B7E-B650-96958BCDA246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Controllers", "Sweepstakes.Controllers\Sweepstakes.Controllers.csproj", "{8BA69278-C359-4B7E-B650-96958BCDA246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweepstakes.Controllers.Draws", "Sweepstakes.Controllers.Draws\Sweepstakes.Controllers.Draws.csproj", "{0417D745-1F86-4EC1-9BD5-9D0661564FEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Controllers.Draws", "Sweepstakes.Controllers.Draws\Sweepstakes.Controllers.Draws.csproj", "{0417D745-1F86-4EC1-9BD5-9D0661564FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +38,6 @@ Global
 		{1A17C8D5-4E39-4A8F-97C2-5673F97420E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A17C8D5-4E39-4A8F-97C2-5673F97420E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A17C8D5-4E39-4A8F-97C2-5673F97420E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90CA21C3-B482-48C0-8040-D1056D79E246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90CA21C3-B482-48C0-8040-D1056D79E246}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90CA21C3-B482-48C0-8040-D1056D79E246}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90CA21C3-B482-48C0-8040-D1056D79E246}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D6E9AD5-99B8-4893-8F6A-6323A0375977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D6E9AD5-99B8-4893-8F6A-6323A0375977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D6E9AD5-99B8-4893-8F6A-6323A0375977}.Release|Any CPU.ActiveCfg = Release|Any CPU
