@@ -17,7 +17,7 @@ namespace Sweepstakes.Services.SweepstakeCreate
         public string Description { get; set; }
 
         /// <summary>
-        /// Draw date.
+        /// Draw local date and time with timezone offset or adjusted in UTC time.
         /// </summary>
         public DateTime DrawDate { get; set; }
     }

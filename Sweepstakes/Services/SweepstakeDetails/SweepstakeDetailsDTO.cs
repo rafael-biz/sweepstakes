@@ -26,6 +26,11 @@ namespace Sweepstakes.Services.SweepstakeDetails
         public DateTime DrawDate { get; set; }
 
         /// <summary>
+        /// Drawn date.
+        /// </summary>
+        public DateTime DrawnDate { get; set; }
+
+        /// <summary>
         /// List of entrants.
         /// </summary>
         public List<EntrantDetailsDTO> Entrants { get; set; }

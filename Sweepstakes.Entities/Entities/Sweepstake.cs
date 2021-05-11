@@ -27,6 +27,11 @@ namespace Sweepstakes.Entities
         public DateTime DrawDate { get; set; }
 
         /// <summary>
+        /// Drawn date.
+        /// </summary>
+        public DateTime DrawnDate { get; set; }
+
+        /// <summary>
         /// List of entrants.
         /// </summary>
         public List<Entrant> Entrants { get; set; }

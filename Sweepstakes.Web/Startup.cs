@@ -27,6 +27,8 @@ namespace Sweepstakes.Web
 
             services.AddSweepstakesMocks();
 
+            services.AddSweepstakesControllers();
+
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory

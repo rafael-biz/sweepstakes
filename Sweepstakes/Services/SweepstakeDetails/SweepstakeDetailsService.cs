@@ -29,6 +29,7 @@ namespace Sweepstakes.Services.SweepstakeDetails
                 Name = sweepstake.Name,
                 Description = sweepstake.Description,
                 DrawDate = sweepstake.DrawDate,
+                DrawnDate = sweepstake.DrawnDate,
                 Entrants = sweepstake.Entrants?.Select(e => new EntrantDetailsDTO()
                 {
                     Name = e.Name,

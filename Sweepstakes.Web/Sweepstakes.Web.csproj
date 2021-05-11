@@ -31,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Sweepstakes.Controllers\Sweepstakes.Controllers.csproj" />
     <ProjectReference Include="..\Sweepstakes.Mocks\Sweepstakes.Mocks.csproj" />
     <ProjectReference Include="..\Sweepstakes\Sweepstakes.csproj" />
   </ItemGroup>
