@@ -24,6 +24,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Controllers", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Controllers.Draws", "Sweepstakes.Controllers.Draws\Sweepstakes.Controllers.Draws.csproj", "{0417D745-1F86-4EC1-9BD5-9D0661564FEB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Repositories", "Sweepstakes.Repositories\Sweepstakes.Repositories.csproj", "{C8DC88E4-334F-4108-BEC9-214E895677F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweepstakes.Repositories.MongoDB", "Sweepstakes.Repositories.MongoDB\Sweepstakes.Repositories.MongoDB.csproj", "{F31AF0D8-2C6D-424C-B9C6-2B3B517D4775}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +62,14 @@ Global
 		{0417D745-1F86-4EC1-9BD5-9D0661564FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0417D745-1F86-4EC1-9BD5-9D0661564FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0417D745-1F86-4EC1-9BD5-9D0661564FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8DC88E4-334F-4108-BEC9-214E895677F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DC88E4-334F-4108-BEC9-214E895677F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DC88E4-334F-4108-BEC9-214E895677F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DC88E4-334F-4108-BEC9-214E895677F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31AF0D8-2C6D-424C-B9C6-2B3B517D4775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31AF0D8-2C6D-424C-B9C6-2B3B517D4775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31AF0D8-2C6D-424C-B9C6-2B3B517D4775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31AF0D8-2C6D-424C-B9C6-2B3B517D4775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

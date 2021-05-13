@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Sweepstakes.Repositories;
 using System;
 using System.IO;
 using System.Reflection;
@@ -13,19 +14,19 @@ namespace Sweepstakes.Web
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSweepstakesServices();
 
-            services.AddSweepstakesMocks();
+            services.AddSweepstakesRepositories(Configuration);
 
             services.AddSweepstakesControllers();
 
@@ -36,8 +37,6 @@ namespace Sweepstakes.Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
-
-            services.AddSwaggerGen();
 
             services.AddSwaggerGen(c =>
             {

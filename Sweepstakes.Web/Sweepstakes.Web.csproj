@@ -12,10 +12,13 @@
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
@@ -32,7 +35,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sweepstakes.Controllers\Sweepstakes.Controllers.csproj" />
-    <ProjectReference Include="..\Sweepstakes.Mocks\Sweepstakes.Mocks.csproj" />
+    <ProjectReference Include="..\Sweepstakes.Repositories\Sweepstakes.Repositories.csproj" />
     <ProjectReference Include="..\Sweepstakes\Sweepstakes.csproj" />
   </ItemGroup>
 

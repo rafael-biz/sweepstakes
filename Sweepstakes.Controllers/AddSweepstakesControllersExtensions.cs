@@ -8,7 +8,7 @@ namespace Sweepstakes
     public static class AddSweepstakesControllersExtensions
     {
         /// <summary>
-        /// Adds mocks to the service collection instead of actual implementations.
+        /// Adds sweepstakes's controllers.
         /// </summary>
         public static IServiceCollection AddSweepstakesControllers(this IServiceCollection services)
         {
