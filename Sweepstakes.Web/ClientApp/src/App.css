@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.fab-add {
+    right: 16px;
+    bottom: 16px;
+    position: absolute;
+}
